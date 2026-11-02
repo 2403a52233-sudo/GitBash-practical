@@ -1,0 +1,351 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Git & GitHub | Version Control System</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f6fb;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #101827;
+            color: white;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h2 {
+            color: #38bdf8;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 22px;
+            font-size: 14px;
+        }
+
+        .hero {
+            background: linear-gradient(120deg, #101827, #263f68);
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 46px;
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+            max-width: 750px;
+            margin: auto;
+            font-size: 18px;
+            color: #dbeafe;
+        }
+
+        .hero button {
+            margin-top: 28px;
+            padding: 14px 30px;
+            border: none;
+            background: #38bdf8;
+            color: #101827;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .section {
+            padding: 65px 8%;
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 35px;
+            color: #14213d;
+        }
+
+        .intro {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .card {
+            background: white;
+            padding: 28px;
+            border-radius: 12px;
+            border-top: 4px solid #2563eb;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #2563eb;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #475569;
+            font-size: 14px;
+        }
+
+        .commands {
+            background: #e8effb;
+        }
+
+        .command-list {
+            background: #101827;
+            color: #a7f3d0;
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 800px;
+            margin: auto;
+            overflow-x: auto;
+        }
+
+        .command-list p {
+            margin: 12px 0;
+        }
+
+        footer {
+            background: #101827;
+            color: white;
+            text-align: center;
+            padding: 28px;
+        }
+
+        @media(max-width: 800px) {
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 7px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>Git & GitHub</h2>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#features">Features</a>
+            <a href="#commands">Commands</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Welcome to Git & GitHub</h1>
+
+        <p>
+            Explore the world of Version Control Systems.
+            Learn how developers manage source code,
+            track changes and collaborate on software
+            projects using Git and GitHub.
+        </p>
+
+        <button onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+            Explore More
+        </button>
+    </section>
+
+    <section class="section" id="about">
+        <h2>Introduction to Version Control</h2>
+
+        <div class="intro">
+            <p>
+                Version Control is a system that records changes
+                made to files over time. It allows developers
+                to track modifications, restore previous versions
+                and collaborate efficiently. Git is a distributed
+                version control system, while GitHub is a cloud-based
+                platform for hosting and managing Git repositories.
+            </p>
+        </div>
+    </section>
+
+    <section class="section" id="features">
+        <h2>Core Concepts of Git & GitHub</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>1. Git</h3>
+                <p>
+                    Git is a distributed version control system
+                    used to track source code changes and manage
+                    different versions of a project.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>2. GitHub</h3>
+                <p>
+                    GitHub is an online platform that hosts Git
+                    repositories and supports collaboration
+                    between developers.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>3. Repository</h3>
+                <p>
+                    A repository stores project files, source code
+                    and the complete history of changes made
+                    during development.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>4. Version Control</h3>
+                <p>
+                    Version control helps maintain different
+                    versions of files and makes it easier
+                    to track and manage changes.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>5. Branching & Merging</h3>
+                <p>
+                    Branching allows developers to work on
+                    separate features, while merging combines
+                    changes into the main branch.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>6. Collaboration</h3>
+                <p>
+                    GitHub enables multiple developers to work
+                    together using commits, pull requests,
+                    code reviews and issue tracking.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>7. Git Bash</h3>
+                <p>
+                    Git Bash provides a command-line environment
+                    to execute Git commands and manage repositories
+                    on Windows.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>8. Remote Repository</h3>
+                <p>
+                    A remote repository is hosted on platforms
+                    like GitHub and allows developers to share
+                    and synchronize project code.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>9. Commits</h3>
+                <p>
+                    A commit records a snapshot of changes
+                    in the repository along with a message
+                    describing the modifications.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section commands" id="commands">
+        <h2>Essential Git Commands</h2>
+
+        <div class="command-list">
+            <p>git init - Initialize a repository</p>
+            <p>git status - Check repository status</p>
+            <p>git add . - Stage all changes</p>
+            <p>git commit -m "message" - Save changes</p>
+            <p>git branch -M main - Rename the branch</p>
+            <p>git remote add origin URL - Connect GitHub</p>
+            <p>git push -u origin main - Upload files</p>
+            <p>git pull - Download remote changes</p>
+            <p>git clone URL - Copy a remote repository</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Benefits of Git & GitHub</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Code Management</h3>
+                <p>Organizes project files and tracks every important modification.</p>
+            </div>
+
+            <div class="card">
+                <h3>Team Collaboration</h3>
+                <p>Allows multiple developers to contribute to the same project.</p>
+            </div>
+
+            <div class="card">
+                <h3>Backup & Recovery</h3>
+                <p>Maintains project history and helps recover previous versions.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h3>Git & GitHub Learning Portal</h3>
+        <p>Track Changes | Manage Code | Collaborate | Develop</p>
+        <p>© 2026 Git Bash Practical</p>
+    </footer>
+
+</body>
+</html>
+```
